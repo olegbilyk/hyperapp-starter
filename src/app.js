@@ -20,16 +20,25 @@ export const view = (state, actions) => {
     <div class="app">
       <header class="app-header">
         <h1>
-          <a href="https://hyperapp.js.org/" target="_blank" rel="noopener noreferrer">
-            <img class="app-logo" src={logo} alt="Hyperapp" />
+          <a href="https://github.com/frenzzy/hyperapp-starter">
+            <img class="app-logo" src={`assets/${logo}`} alt="Hyperapp Starter" />
           </a>
         </h1>
         <p>
-          Edit <code>src/app.js</code> and save to reload.
+          Welcome to{' '}
+          <strong>
+            <a href="https://github.com/frenzzy/hyperapp-starter">Hyperapp Starter</a>
+          </strong>{' '}
+          demo.
         </p>
       </header>
       <main class="app-content">
-        <button type="button" class="app-button" onclick={() => actions.down(1)}>
+        <button
+          type="button"
+          class="app-button"
+          onclick={() => actions.down(1)}
+          disabled={state.count <= 0}
+        >
           -
         </button>
         <span class="app-count">{state.count}</span>

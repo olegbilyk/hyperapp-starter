@@ -12,10 +12,13 @@
   },
   "devDependencies": {
     "@hyperapp/render": "^2.0.0",
+    "gh-pages": "^1.2.0",
     "hyperapp": "^1.2.6",
     "hyperapp-tools": "^1.0.2"
   },
   "scripts": {
+    "predeploy": "hyperapp-tools build --render",
+    "deploy": "gh-pages --dist build/public",
     "start": "hyperapp-tools start",
     "build": "hyperapp-tools build",
     "test": "hyperapp-tools test",
